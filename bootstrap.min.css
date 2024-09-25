@@ -204,3 +204,32 @@ body {
 .ml-1 {
   margin-left: 2.5em
 }
+.scrolling-text {
+  position: fixed;
+  width: 100px; /* 根据需要调整宽度 */
+  font-size: 2rem; /* 根据需要调整字体大小 */
+  color: #00ffd5; /* 字体颜色 */
+  opacity: 0.7; /* 透明度 */
+  animation: scroll 5s linear infinite; /* 动画设置 */
+}
+
+.left-scrolling {
+  left: 0;
+  top: 0;
+  animation-direction: normal; /* 从上到下 */
+}
+
+.right-scrolling {
+  right: 0;
+  top: 0;
+  animation-direction: normal; /* 从上到下 */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(-100%); /* 从顶部开始 */
+  }
+  100% {
+    transform: translateY(100%); /* 滚动到底部 */
+  }
+}
